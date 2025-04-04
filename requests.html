@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلباتي - نظام إدارة طلبات المرضى</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>طلباتي</h1>
+        <nav>
+            <a href="student.html">الرئيسية</a>
+            <a href="requests.html" class="active">طلباتي</a>
+            <button onclick="logout()">تسجيل الخروج</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="student-requests">
+            <h2>طلباتي</h2>
+            
+            <div class="filters">
+                <select id="request-filter">
+                    <option value="all">جميع الطلبات</option>
+                    <option value="pending">المعلقة</option>
+                    <option value="approved">المقبولة</option>
+                    <option value="rejected">المرفوضة</option>
+                </select>
+            </div>
+            
+            <div id="requests-list" class="requests-list">
+                <!-- سيتم ملؤها بواسطة JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 نظام إدارة طلبات المرضى. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="requests.js"></script>
+</body>
+</html>

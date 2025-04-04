@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin",
+      "name": "المسؤول الرئيسي"
+    },
+    {
+      "id": 2,
+      "username": "student1",
+      "password": "student123",
+      "role": "student",
+      "name": "طالب الطب الأول",
+      "maxRequests": 10,
+      "remainingRequests": 10
+    }
+  ],
+  "patients": [
+    {
+      "id": 1,
+      "name": "أحمد محمد",
+      "age": 45,
+      "condition": "سكري",
+      "priority": "عالي",
+      "lastRequest": "2023-05-10"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "أمراض السكري",
+      "code": "MED-401",
+      "minPatients": 8,
+      "maxPatients": 10,
+      "description": "دراسة حالات مرضى السكري"
+    },
+    {
+      "id": 2,
+      "name": "أمراض القلب",
+      "code": "MED-402",
+      "minPatients": 12,
+      "maxPatients": 15,
+      "description": "دراسة حالات مرضى القلب"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "patientId": 1,
+      "studentId": 2,
+      "courseId": 1,
+      "date": "2023-06-20",
+      "status": "pending",
+      "items": ["أدوية سكري", "مستلزمات حقن"],
+      "approvedItems": []
+    }
+  ],
+  "settings": {
+    "adminApprovalLimit": 13,
+    "approvalTimeWindow": "weekly"
+  }
+}

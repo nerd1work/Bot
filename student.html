@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الطالب - نظام إدارة طلبات المرضى</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>لوحة الطالب</h1>
+        <nav>
+            <a href="student.html" class="active">الرئيسية</a>
+            <a href="requests.html">طلباتي</a>
+            <button onclick="logout()">تسجيل الخروج</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="student-dashboard">
+            <h2>مرحباً، <span id="student-name"></span></h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>طلباتي المعلقة</h3>
+                    <div class="stat-value" id="my-pending-requests">0</div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>طلباتي المقبولة</h3>
+                    <div class="stat-value" id="my-approved-requests">0</div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>الطلبات المتبقية</h3>
+                    <div class="stat-value" id="my-remaining-requests">0</div>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <h3>إجراءات سريعة</h3>
+                <button onclick="location.href='new-request.html'">تقديم طلب جديد</button>
+            </div>
+            
+            <div class="my-courses">
+                <h3>مقرراتي</h3>
+                <div id="courses-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 نظام إدارة طلبات المرضى. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>
